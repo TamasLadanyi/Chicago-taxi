@@ -85,7 +85,6 @@ taxi_trips_path = 'transformed_data/taxi_trips/'
 file_format = "csv"
 
 taxi_trip_file_name_list = list_from_s3(my_bucket, taxi_trips_path, file_format)  # noqa: E501
-print(taxi_trip_file_name_list)
 delete_from_s3(my_bucket, taxi_trip_file_name_list, taxi_trips_path)
 
 # weather delete
@@ -94,7 +93,6 @@ weather_path = 'transformed_data/weather/'
 file_format = "csv"
 
 weather_file_name_list = list_from_s3(my_bucket, weather_path, file_format)
-print(weather_file_name_list)
 delete_from_s3(my_bucket, weather_file_name_list, weather_path)
 
 # raw data delete
@@ -103,7 +101,6 @@ raw_taxi_trips_path = 'raw_data/processed/taxi_data/'
 file_format = "json"
 
 raw_taxi_trips_name_list = list_from_s3(my_bucket, raw_taxi_trips_path, file_format)  # noqa: E501
-print(raw_taxi_trips_name_list)
 delete_from_s3(my_bucket, raw_taxi_trips_name_list, raw_taxi_trips_path)
 
 my_bucket = 'chichago-taxi'
@@ -111,5 +108,4 @@ raw_weather_name_path = 'raw_data/processed/weather_data/'
 file_format = "json"
 
 raw_weather_name_list = list_from_s3(my_bucket, raw_weather_name_path, file_format)  # noqa: E501
-print(raw_weather_name_list)
 delete_from_s3(my_bucket, raw_weather_name_list, raw_weather_name_path)
